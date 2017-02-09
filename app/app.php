@@ -43,7 +43,7 @@
       echo "play";
       var_dump($new_tamagochi->getPlay());
       var_dump($new_tamagochi->getTime());
-      return $app['twig']->render('main.html.twig');
+      return $app['twig']->render('main.html.twig', $new_tamagochi->getSleep());
     });
 
     $app->get("/engage", function() use($app) {
